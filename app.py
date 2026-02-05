@@ -50,6 +50,26 @@ st.markdown(
     div[data-testid="stTabs"] button[aria-selected="true"] {
         border-bottom: 3px solid #000000;
     }
+    /* KPI Cards - force correct colors in dark mode */
+    .kpi-card {
+        height: 90px;
+        padding: 12px;
+        border-radius: 10px;
+        background-color: #f2f3f5 !important;
+        text-align: center;
+    }
+
+    .kpi-title {
+        font-size: 12px;
+        color: #000000 !important;
+    }
+
+    .kpi-value {
+        font-size: 20px;
+        font-weight: 600;
+        color: #000000 !important;
+    }
+
     </style>
     """,
     unsafe_allow_html=True
@@ -161,10 +181,9 @@ top_pizza = (
 def kpi_card(title, value):
     st.markdown(
         f"""
-        <div style="height:90px;padding:12px;border-radius:10px;
-        background-color:#f2f3f5;text-align:center;">
-            <div style="font-size:11px;color:#444";font-weight:500>{title}</div>
-            <div style="font-size:25px;font-weight:600">{value}</div>
+        <div class="kpi-card">
+            <div class="kpi-title">{title}</div>
+            <div class="kpi-value">{value}</div>
         </div>
         """,
         unsafe_allow_html=True

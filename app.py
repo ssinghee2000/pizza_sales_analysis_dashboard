@@ -61,9 +61,7 @@ st.title("Pizza Sales Dashboard")
 # ------------------ DATA ------------------
 @st.cache_data
 def load_data():
-    df = pd.read_excel(
-        r"C:\Users\ssing\Downloads\Data Model - Pizza Sales.xlsx\Data Model - Pizza Sales.xlsx"
-    )
+    df = pd.read_excel("data/pizza_sales.xlsx")
     df["order_date"] = pd.to_datetime(df["order_date"]).dt.date
     df["order_month"] = pd.to_datetime(df["order_date"]).dt.month_name()
     df["order_month_num"] = pd.to_datetime(df["order_date"]).dt.month

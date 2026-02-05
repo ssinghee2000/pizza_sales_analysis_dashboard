@@ -49,10 +49,7 @@ Summarizes the most important insights dynamically based on selected filters, tr
 4. Run the Streamlit App
    ```bash
    streamlit run app.py
-
    
-
-
 ## 👤 Author
 
 Shreya Singhee  
